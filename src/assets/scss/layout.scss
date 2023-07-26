@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "NanumSquareRound";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: NanumSquareRound;
+}
+
 .skip_nav a {
   position: absolute;
   top: -30px;
@@ -17,10 +29,9 @@
 }
 
 section {
-  position: absolute;
   width: calc(100% - $header-size);
-  top: 0;
-  left: $header-size;
+  min-height: 90vh;
+  padding-left: $header-size;
 }
 
 h2 {
