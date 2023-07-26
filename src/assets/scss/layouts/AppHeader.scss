@@ -8,7 +8,7 @@ header {
   position: fixed;
   left: 0px;
   top: 0px;
-  background-color: #11192a;
+  background-color: $dark-color;
   box-shadow: none;
 
   h1 {
@@ -18,7 +18,7 @@ header {
   }
 
   .logo img {
-    display: none;
+    display: block;
     width: 50px;
     background-color: $main-color;
     @include border-radius(50%);
