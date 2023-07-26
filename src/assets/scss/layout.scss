@@ -1,0 +1,40 @@
+.skip_nav a {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  background: #000;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  font-size: 12px;
+  padding: 0 6px;
+  z-index: 999;
+
+  &:focus,
+  &:active {
+    top: 0;
+  }
+}
+
+section {
+  position: absolute;
+  width: calc(100% - $header-size);
+  top: 0;
+  left: $header-size;
+}
+
+h2 {
+  padding: 20px $main-contents-padding;
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 15px #ccd7e5;
+}
+
+article {
+  padding: 50px $main-contents-padding;
+}
+
+// AppHeader
+@import url("layouts/AppHeader.scss");
+
+// AppFooter
+@import url("layouts/AppFooter.scss");

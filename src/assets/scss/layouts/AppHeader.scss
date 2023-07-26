@@ -1,0 +1,50 @@
+header {
+  width: $header-size - 50px;
+  min-width: $header-size - 50px;
+  color: #fff;
+  z-index: 7;
+  height: 100%;
+  padding: 30px 25px;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  background-color: #11192a;
+  box-shadow: none;
+
+  h1 {
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .logo img {
+    display: none;
+    width: 50px;
+    background-color: $main-color;
+    @include border-radius(50%);
+  }
+
+  nav {
+    a {
+      display: block;
+      padding: 15px 20px;
+      @include border-radius(10px);
+      color: rgba(255, 255, 255, 0.6);
+      font-weight: bold;
+
+      &:hover,
+      &:focus {
+        color: rgba(255, 255, 255, 1);
+        background-color: rgba(255, 255, 255, 0.1);
+        -webkit-transition: background-color #{$transition-time}s,
+          color #{$transition-time}s;
+        transition: background-color #{$transition-time}s,
+          color #{$transition-time}s;
+      }
+    }
+  }
+}
+
+@include mobile {
+  /*브라우저 사이즈767px이하일때*/
+}
