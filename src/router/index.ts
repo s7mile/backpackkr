@@ -1,4 +1,3 @@
-import Vue from "vue";
 import { createWebHistory, createRouter } from "vue-router";
 import IntroView from "@/views/IntroView.vue";
 import CardUI from "@/views/CardUI.vue";

@@ -3,7 +3,6 @@
     <div class="textarea_wrapper">
       <textarea
         name="comment"
-        id="commentTextarea"
         :placeholder="placeholder"
         v-model="value"
         :disabled="disabled"
