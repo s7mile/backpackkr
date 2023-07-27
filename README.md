@@ -11,7 +11,7 @@ npm run serve
 
 ## demo
 
-[데모](http://ec2-13-38-245-157.eu-west-3.compute.amazonaws.com)
+[데모](http://ec2-3-35-138-111.ap-northeast-2.compute.amazonaws.com)
 
 ## 소개
 
