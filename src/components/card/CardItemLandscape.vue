@@ -1,18 +1,18 @@
 <template>
-  <li :class="data?.cardType">
+  <li :class="data.cardType">
     <thumbnail
-      :imgurl="data?.imgurl"
-      :alt="data?.title"
-      :cardType="data?.cardType"
+      :imgurl="data.imgurl"
+      :alt="data.title"
+      :cardType="data.cardType"
     />
     <div class="info">
-      <strong>{{ data?.title }}</strong>
-      <p>{{ data?.comment }}</p>
+      <strong>{{ data.title }}</strong>
+      <p>{{ data.comment }}</p>
 
       <div class="rating">
-        <RatingStar :count="data?.rating" />
+        <RatingStar :count="data.rating" />
       </div>
-      <span class="user_name">{{ data?.userName }}</span>
+      <span class="user_name">{{ data.userName }}</span>
     </div>
   </li>
 </template>
@@ -24,7 +24,10 @@ import Thumbnail from "./Thumbnail.vue";
 export default {
   name: "CardItemLandscape",
   props: {
-    data: Object,
+    data: {
+      type: Object,
+      required: true,
+    },
   },
   components: {
     RatingStar,
