@@ -35,14 +35,16 @@ export default defineComponent({
     placeholder: String,
     disabled: Boolean,
     readonly: Boolean,
+    maxLength: {
+      type: Number,
+      required: true,
+    },
   },
   setup(props) {
     const value = ref(props.defaultValue ? props.defaultValue : "");
-    const maxLength = 500;
 
     return {
       value,
-      maxLength,
     };
   },
 });

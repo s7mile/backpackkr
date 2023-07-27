@@ -16,9 +16,6 @@
 <script lang="ts">
 export default {
   name: "IntroView",
-  props: {
-    msg: String,
-  },
 };
 </script>
 
@@ -27,7 +24,7 @@ export default {
 .greeting {
   font-weight: bold;
   font-size: 30px;
-  // color: $dark-color;
+  color: $dark-color;
   text-align: center;
   padding: 30px 0;
 
