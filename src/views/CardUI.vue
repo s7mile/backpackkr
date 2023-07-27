@@ -1,10 +1,10 @@
 <template>
-  <article>
+  <section>
     <h2>과제 1. 카드 UI</h2>
     <div>
       <CardList :datas="state.resultDatas" />
     </div>
-  </article>
+  </section>
 </template>
 
 <script lang="ts">

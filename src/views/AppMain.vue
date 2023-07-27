@@ -4,9 +4,7 @@
     <a href="#content">컨텐츠 바로가기</a>
   </div>
   <AppHeader />
-  <section id="content">
-    <router-view></router-view>
-  </section>
+  <router-view id="content"></router-view>
   <AppFooter />
 </template>
 

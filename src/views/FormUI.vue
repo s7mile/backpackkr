@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <section>
     <h2>과제 2. 입력 폼 UI</h2>
     <div>
       <div>
@@ -15,7 +15,7 @@
 
       <FormList :maxLength="maxLength" />
     </div>
-  </article>
+  </section>
 </template>
 
 <script lang="ts">
