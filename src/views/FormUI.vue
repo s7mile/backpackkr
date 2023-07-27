@@ -1,18 +1,20 @@
 <template>
-  <h2>과제 2. 입력 폼 UI</h2>
   <article>
+    <h2>과제 2. 입력 폼 UI</h2>
     <div>
-      <label for="maxLength">글자수 제한</label>
-      <input
-        type="number"
-        name="maxLength"
-        id="maxLength"
-        v-model="inputMaxLength"
-      />
-      <button @click="updateMaxLength">변경</button>
-    </div>
+      <div>
+        <label for="maxLength">글자수 제한</label>
+        <input
+          type="number"
+          name="maxLength"
+          id="maxLength"
+          v-model="inputMaxLength"
+        />
+        <button @click="updateMaxLength">변경</button>
+      </div>
 
-    <FormList :maxLength="maxLength" />
+      <FormList :maxLength="maxLength" />
+    </div>
   </article>
 </template>
 

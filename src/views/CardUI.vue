@@ -1,7 +1,9 @@
 <template>
-  <h2>과제 1. 카드 UI</h2>
   <article>
-    <CardList :datas="state.resultDatas" />
+    <h2>과제 1. 카드 UI</h2>
+    <div>
+      <CardList :datas="state.resultDatas" />
+    </div>
   </article>
 </template>
 
