@@ -1,21 +1,21 @@
 <template>
-  <li :class="data?.cardType">
+  <li :class="data.cardType">
     <thumbnail
-      :imgurl="data?.imgurl"
-      :alt="data?.title"
-      :cardType="data?.cardType"
+      :imgurl="data.imgurl"
+      :alt="data.title"
+      :cardType="data.cardType"
     />
     <div class="info">
-      <p>{{ data?.label }}</p>
-      <strong>{{ data?.title }}</strong>
-      <span class="highlight">{{ data?.highlight }}</span>
-      <span class="crossout">{{ data?.crossout }}</span>
+      <p>{{ data.label }}</p>
+      <strong>{{ data.title }}</strong>
+      <span class="highlight">{{ data.highlight }}</span>
+      <span class="crossout">{{ data.crossout }}</span>
     </div>
-    <div v-if="data?.showRating" class="rating_wrap">
+    <div v-if="data.showRating" class="rating_wrap">
       <div class="rating">
-        <RatingStar :count="data?.rating" />
+        <RatingStar :count="data.rating" />
       </div>
-      <p v-if="data?.comment.length > 0">{{ data?.comment }}</p>
+      <p v-if="data.comment.length > 0">{{ data.comment }}</p>
     </div>
   </li>
 </template>
@@ -27,7 +27,10 @@ import Thumbnail from "./Thumbnail.vue";
 export default {
   name: "CardItemPortrait",
   props: {
-    data: Object,
+    data: {
+      type: Object,
+      required: true,
+    },
   },
   components: {
     RatingStar,

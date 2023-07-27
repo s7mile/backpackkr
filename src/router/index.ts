@@ -1,12 +1,14 @@
+import Vue from "vue";
 import { createWebHistory, createRouter } from "vue-router";
 import IntroView from "@/views/IntroView.vue";
 import CardUI from "@/views/CardUI.vue";
 import FormUI from "@/views/FormUI.vue";
 
+const title = " : 2023 아이디어스(+백패커) 과제";
 const routes = [
   {
     path: "/",
-    name: "메인 페이지",
+    name: "Intro",
     component: IntroView,
   },
   {
@@ -24,6 +26,12 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+});
+
+router.afterEach((to, from) => {
+  if (typeof to.name === "string") {
+    document.title = to.name + title;
+  }
 });
 
 export default router;

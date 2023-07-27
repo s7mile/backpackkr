@@ -1,30 +1,56 @@
 <template>
   <h2>과제 2. 입력 폼 UI</h2>
   <article>
-    <h3>1. 초기값O & 입력 중</h3>
-    <FormItem
-      defaultValue="초기값이 있을 수 있습니다."
-      placeholder="주문요청사항을 입력해주세요"
-    />
-    <h3>2. 초기값X & 입력 중</h3>
-    <FormItem placeholder="주문요청사항을 입력해주세요" />
-    <h3>3. disabled</h3>
-    <FormItem placeholder="주문요청사항을 입력해주세요" disabled />
-    <h3>4. readonly</h3>
-    <FormItem placeholder="주문요청사항을 입력해주세요" readonly />
+    <div>
+      <label for="maxLength">글자수 제한</label>
+      <input
+        type="number"
+        name="maxLength"
+        id="maxLength"
+        v-model="inputMaxLength"
+      />
+      <button @click="updateMaxLength">변경</button>
+    </div>
+
+    <FormList :maxLength="maxLength" />
   </article>
 </template>
 
 <script lang="ts">
-import FormItem from "../components/form/FormItem.vue";
+import { ref } from "vue";
+import FormList from "../components/form/FormList.vue";
 
 export default {
   name: "FormUI",
-  props: {
-    msg: String,
-  },
   components: {
-    FormItem,
+    FormList,
+  },
+  setup() {
+    // data
+    const defaultMaxLength = 500;
+    const defaultMinLength = 15;
+
+    let maxLength = ref(defaultMaxLength);
+    let inputMaxLength = ref(defaultMaxLength);
+
+    // method
+    const updateMaxLength = () => {
+      if (inputMaxLength.value < defaultMinLength) {
+        alert("최소값은 15 입니다");
+        maxLength.value = defaultMinLength;
+        inputMaxLength.value = defaultMinLength;
+      } else {
+        maxLength.value = inputMaxLength.value;
+      }
+    };
+
+    return { maxLength, inputMaxLength, updateMaxLength };
   },
 };
 </script>
+
+<style lang="scss" scoped>
+div {
+  margin-bottom: 50px;
+}
+</style>

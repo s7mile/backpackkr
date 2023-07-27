@@ -1,4 +1,5 @@
 <template>
+  <p>평점 {{ count }}</p>
   <i class="fill" v-for="star in count" :key="star"></i>
   <i v-for="star in 5 - count" :key="star"></i>
 </template>
@@ -7,7 +8,10 @@
 export default {
   name: "RatingStar",
   props: {
-    count: Number,
+    count: {
+      type: Number,
+      required: true,
+    },
   },
 };
 </script>
@@ -28,5 +32,9 @@ i {
   &.fill {
     background-color: $yellow-color;
   }
+}
+
+p {
+  @include hidden();
 }
 </style>

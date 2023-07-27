@@ -42,12 +42,7 @@ export default {
   }
 
   p {
-    overflow: hidden;
-    position: absolute;
-    border: 0;
-    width: 1px;
-    height: 1px;
-    clip: rect(1px, 1px, 1px, 1px);
+    @include hidden();
   }
 }
 </style>
